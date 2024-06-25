@@ -1,0 +1,16 @@
+module StiFallback
+  VERSION: String
+
+  extend ActiveSupport::Concern
+
+  class_methods do
+    # Specifies which types should raise an error when not found
+    def sti_fallback: (raise_error_for: Array[String]?) -> void
+
+    # Returns the class for a given type name, falling back to the base class or raising an error as configured
+    def sti_class_for: (String) -> untyped
+  end
+
+  # This attribute holds the types that should raise an error
+  _raise_error_for_types: Array[String]
+end
