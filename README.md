@@ -14,8 +14,8 @@ class Action < ApplicationRecord
   
   validates :type, inclusion: { in: %w[Value1 Value2 Value3] }
 
-  # optional: specify which types should still raise an error when not found
-  sti_fallback raise_error_for: %w[Value1 Value2]
+  # optional: still raise an error when the following subclasses are not found
+  # sti_fallback raise_error_for: %w[Value1 Value2]
 end
 ```
 
