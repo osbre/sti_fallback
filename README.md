@@ -1,5 +1,10 @@
 # StiFallback
 
+![Gem Total Downloads](https://img.shields.io/gem/dt/sti_fallback)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/osbre/sti_fallback/.github%2Fworkflows%2Fmain.yml?label=tests)
+
+
+
 Imagine you're using [STI](https://api.rubyonrails.org/classes/ActiveRecord/Inheritance.html) and getting a `type` column from your users. You want to validate that the type is one of the expected values instead of letting ActiveRecord raise an error when the subclass is not found.
 
 This can be achieved by defining a validation rule on the base mode and falling back to it when the subclass is not found. 
