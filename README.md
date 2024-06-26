@@ -1,8 +1,10 @@
 # StiFallback
 
-Imagine you're getting a `type` column from your users. You want to validate that the type is one of the expected values instead of letting ActiveRecord raise an error when the subclass is not found.
+Imagine you're using [STI](https://api.rubyonrails.org/classes/ActiveRecord/Inheritance.html) and getting a `type` column from your users. You want to validate that the type is one of the expected values instead of letting ActiveRecord raise an error when the subclass is not found.
 
-This can be achieved by using the falling back to the base and defining a validation for the `type` column.
+This can be achieved by defining a validation rule on the base mode and falling back to it when the subclass is not found. 
+
+This gem provides a simple way to do that.
 
 ## Usage
 
