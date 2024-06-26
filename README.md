@@ -1,8 +1,10 @@
 # StiFallback
 
-Handle validation or additonal behavior on missing subclasses in STI by falling back to the base class.
+Imagine you're getting a `type` column from your users. You want to validate that the type is one of the expected values instead of letting ActiveRecord raise an error when the subclass is not found.
 
-Example:
+This can be achieved by using the falling back to the base and defining a validation for the `type` column.
+
+## Usage
 
 ```ruby
 class Action < ApplicationRecord
